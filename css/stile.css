@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700&display=swap');
+
+@import url(/fonts/FontsFree-Net-le-murmure.ttf);
+
 /* body {
     cursor: url(/img/cursor.png) 2 2, pointer;
 } */
@@ -9,12 +15,12 @@
     height: 100%;
 }
 
-.index-background-wrp {
+.main-background-wrp {
     opacity: 0;
     animation: fade-in 2.5s forwards;
 }
 
-.index-background {
+.main-background {
     background-image: url(/img/index_background.jpeg);
     background-repeat: no-repeat;
     background-position: center;
@@ -30,7 +36,7 @@
     animation-iteration-count: infinite;
 }
 
-.index-content {
+.main-content {
     position: relative;
 }
 
@@ -48,16 +54,100 @@
     transition: 0.8s;
 }
 
-.play-pause::after {
-    
-}
-
 .play-pause:hover {
     cursor: pointer;
     box-shadow: 0 0 15px #FFFFFF;
     scale: 1.1;
     opacity: 0.8;
     transition: 0.8s;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 90px;
+}
+
+.main-logo {
+    display: block;
+    position: absolute;
+    background-image: url(/img/logo.webp);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    -moz-background-size: cover; 
+    -o-background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #FFFFFF;
+    margin: 50px 0 0 100px;
+    z-index: 6;
+    animation: logo-fade-in 1.5s forwards;
+    transition: 0.8s;
+}
+
+.main-logo:hover {
+    scale: 1.1;
+    transition: 0.8s;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.header-menu-item {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Le Murmure', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.8s;
+    z-index: 6;
+    margin-top: -250px;
+}
+
+.header-menu-item:hover {
+    text-shadow: 0 0 30px #FFFFFF;
+    scale: 1.05;
+    transition: 0.8s;
+}
+
+.header-menu-item:nth-child(1) {
+    animation: menu-fade-in 1.5s forwards;
+}
+.header-menu-item:nth-child(2) {
+    animation: menu-fade-in 1.5s forwards;
+    animation-delay: 0.3s;
+}
+.header-menu-item:nth-child(3) {
+    animation: menu-fade-in 1.5s forwards;
+    animation-delay: 0.6s;
+}
+.header-menu-item:nth-child(4) {
+    animation: menu-fade-in 1.5s forwards;
+    animation-delay: 0.9s;
+}
+.header-menu-item:nth-child(5) {
+    animation: menu-fade-in 1.5s forwards;
+    animation-delay: 1.2s;
+}
+
+.fogging {
+    opacity: 0.7;
+    z-index: 5;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.un-fogging {
+    opacity: 0;
 }
 
 /* -- ANIMATIONS -- */
@@ -69,6 +159,16 @@
   }
 
 @keyframes fade-in {
-0% {opacity: 0;}
-100% {opacity: 1;}
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes logo-fade-in {
+    0% {margin-left: -170px;}
+    100% {margin-left: 100px;}
+}
+
+@keyframes menu-fade-in  {
+    0% {margin-top: -250px;}
+    100% {margin-top: 0px;}
 }

@@ -1,3 +1,5 @@
+/*-- Player control --*/
+
 const player = document.getElementById('player')
 const playerButton = document.querySelector('.play-pause')
 
@@ -37,6 +39,32 @@ $('#player').on('pause', function() {
     </defs>
     </svg>`
     console.log('Off')
+});
+
+/*-- Menu hover handling --*/
+
+const fogging = document.querySelector('#fogging');
+
+$(document).on("mouseover", ".header-menu-item", function() {
+    fogging.classList.remove("un-fogging");
+    fogging.classList.add("fogging");
+    fogging.style.transition = "all 1s ease 0s";
+});
+$(document).on("mouseout", ".header-menu-item", function() {    
+    fogging.classList.add("un-fogging");
+    fogging.style.transition = "all 1s ease 0s";
+
+});
+
+$(document).on("mouseover", ".main-logo", function() {
+    fogging.classList.remove("un-fogging");
+    fogging.classList.add("fogging");
+    fogging.style.transition = "all 1s ease 0s";
+});
+$(document).on("mouseout", ".main-logo", function() {    
+    fogging.classList.add("un-fogging");
+    fogging.style.transition = "all 1s ease 0s";
+
 });
 
 
