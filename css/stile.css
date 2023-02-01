@@ -1,0 +1,74 @@
+/* body {
+    cursor: url(/img/cursor.png) 2 2, pointer;
+} */
+
+.black-bgr {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.index-background-wrp {
+    opacity: 0;
+    animation: fade-in 2.5s forwards;
+}
+
+.index-background {
+    background-image: url(/img/index_background.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -moz-background-size: cover; 
+    /* -webkit-background-size: cover;  */
+    -o-background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    animation-name: dynamic;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+.index-content {
+    position: relative;
+}
+
+.play-pause {
+    color: #FFFFFF;
+    opacity: 0.5;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    padding: 2px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    transition: 0.8s;
+}
+
+.play-pause::after {
+    
+}
+
+.play-pause:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px #FFFFFF;
+    scale: 1.1;
+    opacity: 0.8;
+    transition: 0.8s;
+}
+
+/* -- ANIMATIONS -- */
+
+@keyframes dynamic {
+    0%   { scale: 1.1;}
+    50%  { scale: 1;}
+    100% { scale: 1.1;}
+  }
+
+@keyframes fade-in {
+0% {opacity: 0;}
+100% {opacity: 1;}
+}

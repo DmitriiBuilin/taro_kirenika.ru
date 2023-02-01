@@ -7,14 +7,28 @@
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Всё о Таро, Расклады">
     <meta name="keywords" content="Таро денег, Расклад «Путь Дракона», Расклад «Энергетический ресурс человека»">
+    <link rel="icon" href="/img/world.png" />
     <link rel="stylesheet" href="/css/normalize.css"> 
-    <link rel="stylesheet" href="/css/stile.sass">
-    <title>Киреника - Марина Холкина</title>
+    <link rel="stylesheet" href="/css/stile.css">
+    <title>Таро - Киреника - Марина Холкина</title>
 </head>
 <body>
-    <audio autoplay="autoplay" controls loop="loop">
-        <source src="/audio/background.mp3">   
-        <source src="/audio/background.webm">             
-    </audio>
+    <main>
+        <div class="black-bgr">
+            <div class="index-background-wrp">
+                <div class="index-background"></div>       
+            </div>
+        </div>        
+        <div class="index-content container">
+            <audio id="player" autoplay loop="loop">
+                <source src="/audio/background.mp3">   
+                <source src="/audio/background.webm">             
+            </audio>
+            <div onClick="playPause()" class="play-pause">
+            </div>
+        </div>
+    </main>
+<script src="/js/jquery-3.6.3.min.js"></script>
+<script src="/js/script.js"></script>
 </body>
 </html>
