@@ -97,13 +97,16 @@
     align-items: center;
     width: 100%;
     max-width: 800px;
+    flex-wrap: wrap;
+    margin-left: 200px;
+    gap: 10px 20px;
 }
 
 .header-menu-item {
     text-transform: uppercase;
     text-decoration: none;
-    color: #FFFFFF;
-    font-family: 'Le Murmure', sans-serif;
+    color: #cccccc;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 18px;
     transition: 0.8s;
@@ -112,6 +115,7 @@
 }
 
 .header-menu-item:hover {
+    color: #FFFFFF;
     text-shadow: 0 0 30px #FFFFFF;
     scale: 1.05;
     transition: 0.8s;
@@ -147,8 +151,74 @@
 }
 
 .un-fogging {
+    z-index: 0;
     opacity: 0;
 }
+
+.pop-up-menu-wrp {
+    display: none;
+}
+
+.pop-up-menu {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.pop-up-menu-button {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.8s;
+    z-index: 6;
+    
+}
+
+.pop-up-menu-item {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.8s;
+    z-index: 6;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    margin: 0 auto;
+    bottom: -40px;
+    width: 100%;
+    height: 30px;
+    animation: socials-fade-in 1.5s forwards;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.social-icons svg {
+    fill: #e2e2e2;
+    transition: 0.8s;
+    border-radius: 10px;
+}
+
+.social-icons svg:hover {
+    cursor: pointer;
+    fill: #FFFFFF;
+    box-shadow: 0 0 15px #FFFFFF;
+    transition: 0.8s;
+}
+
 
 /* -- ANIMATIONS -- */
 
@@ -171,4 +241,44 @@
 @keyframes menu-fade-in  {
     0% {margin-top: -250px;}
     100% {margin-top: 0px;}
+}
+
+@keyframes socials-fade-in {
+    0% {bottom: -40px;}
+    100% {bottom: 30px;}
+}
+
+
+/* -- ADAPTIVE -- */
+
+@media screen and (max-width: 1300px) {
+    .header {
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .header {
+        padding: 69px;
+    }
+    .pop-up-menu-wrp {
+        display: block;
+    }
+    .main-logo {
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+    .header-menu-item {
+        margin-top: 0px;
+        opacity: 0;
+    }
+
+    @keyframes logo-fade-in {
+        0% {margin-left: -170px;}
+        100% {margin-left: 20px;}
+    }
+    @keyframes menu-fade-in  {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
 }
