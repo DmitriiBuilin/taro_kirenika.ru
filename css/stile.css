@@ -73,7 +73,7 @@
 .main-logo {
     display: block;
     position: absolute;
-    background-image: url(/img/logo.webp);
+    background-image: url(/img/logo.png);
     width: 100px;
     height: 100px;
     background-size: cover;
